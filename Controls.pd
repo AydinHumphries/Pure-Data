@@ -1,0 +1,227 @@
+#N canvas 1 0 1890 963 10;
+#X obj 22 351 cnv 15 107 275 empty empty empty 20 12 0 14 -258049 -1
+0;
+#X obj 34 371 vradio 19 0 0 13 one Root_Pitch Root_Pitch 0 -8 0 15
+-262144 -1 -1 1;
+#X text 58 411 C#;
+#X text 58 430 D;
+#X text 58 450 Eb;
+#X text 58 467 E;
+#X text 58 485 F;
+#X text 58 505 F#;
+#X text 58 524 G;
+#X text 59 562 A;
+#X text 59 581 Bb;
+#X text 59 598 B;
+#X text 58 391 C;
+#X text 58 543 Ab;
+#X obj 134 240 cnv 15 97 250 empty empty empty 20 12 0 14 -258081 -1
+0;
+#X obj 145 258 vradio 18 0 0 12 two Harmony Harmony 0 -8 0 15 -262144
+-1 -1 1;
+#X text 166 312 I7;
+#X text 166 276 Imaj7;
+#X text 166 348 II7;
+#X text 166 366 IV7;
+#X text 166 402 IVmaj7;
+#X text 166 330 bIImaj7;
+#X text 166 420 bVI7;
+#X text 166 294 im7;
+#X text 166 384 ivm7;
+#X text 166 440 bVImaj7;
+#X text 166 458 vim7;
+#X obj 235 95 cnv 15 146 220 empty empty empty 20 12 0 14 -260097 -1
+0;
+#X obj 245 115 vradio 19 0 0 10 three Time_signature Time_signature
+0 -8 0 15 -262144 -1 -1 1;
+#X text 267 136 12/8;
+#X text 267 154 11/8;
+#X text 267 173 10/8;
+#X text 274 191 9/8;
+#X text 274 211 8/8;
+#X text 274 230 7/8;
+#X text 274 249 6/8;
+#X text 274 269 5/8;
+#X text 274 287 4/8;
+#X obj 555 13 cnv 15 435 157 empty empty empty 20 12 0 14 -261682 -66577
+0;
+#X obj 567 38 vradio 17 0 0 4 five Instrumentation_Group_1 Instrumentation_Group_1
+0 -8 0 15 -262144 -1 -1 0;
+#X text 587 55 Crotales + Hi-Hat;
+#X text 587 73 Glockenspiel + Hi-Hat;
+#X text 587 90 Xylophone + Hi-Hat;
+#X obj 630 176 cnv 15 507 159 empty empty empty 20 12 0 14 -262130
+-66577 0;
+#X obj 642 203 vradio 17 0 0 3 six Instrumentation_Group_2 Instrumentation_Group_2
+0 -8 0 15 -262144 -1 -1 0;
+#X text 662 220 Synth Brass + Snare;
+#X text 662 236 FM Synth + Snare + Tom-Toms;
+#X obj 759 342 cnv 15 491 143 empty empty empty 20 12 0 14 -204786
+-66577 0;
+#X obj 784 369 vradio 17 0 0 6 seven Instrumentation_Group_3 Instrumentation_Group_3
+0 -8 0 15 -262144 -1 -1 0;
+#X text 806 389 Harp + Bass Drum;
+#X text 806 405 Square + Bass Drum;
+#X text 806 420 Chiff + Bass Drum;
+#X text 806 436 Bass & Lead + Bass Drum;
+#X text 806 454 Vibraphone + Bass Drum;
+#X obj 826 491 cnv 15 536 148 empty empty empty 20 12 0 14 -203904
+-66577 0;
+#X obj 838 518 vradio 17 0 0 6 eight Instrumentation_Group_4 Instrumentation_Group_4
+0 -8 0 15 -262144 -1 -1 0;
+#X text 858 538 Harp Paulstretch;
+#X text 858 554 Square Paulstretch;
+#X text 858 569 Chiff Paulstretch;
+#X text 857 603 Vibraphone Paulstretch;
+#X text 858 585 Bass Paulstretch;
+#X obj 386 12 cnv 15 154 88 empty empty empty 20 12 0 14 -4096 -1 0
+;
+#X obj 393 36 vradio 17 0 0 3 four Melodic_Contours Melodic_contours
+0 -8 0 15 -262144 -1 -1 1;
+#X text 410 53 asc;
+#X text 410 71 des;
+#X obj 383 408 cnv 15 310 127 empty empty empty 20 12 0 14 -233017
+-66577 0;
+#X obj 466 443 s loop;
+#X obj 459 415 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 537 476 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 537 496 s randomnumbergenerator;
+#X obj 421 491 s stop;
+#X msg 417 455 stop;
+#X obj 565 442 Patch;
+#X obj 897 59 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#N canvas 721 331 450 300 melodysoundeffects 0;
+#X obj 56 17 inlet;
+#X obj 78 148 outlet;
+#X obj 55 43 s MelodyFX;
+#X obj 78 120 r MelodyFX;
+#X connect 0 0 2 0;
+#X connect 3 0 1 0;
+#X restore 942 74 pd melodysoundeffects;
+#X obj 942 98 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#N canvas 721 331 450 300 hihatsoundeffects 0;
+#X obj 52 7 inlet;
+#X obj 74 138 outlet;
+#X obj 51 33 s hi-hatFX;
+#X obj 74 110 r hi-hatFX;
+#X connect 0 0 2 0;
+#X connect 3 0 1 0;
+#X restore 976 128 pd hihatsoundeffects;
+#X obj 897 113 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 976 150 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 1029 231 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 1074 270 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
+1 1;
+#X obj 1029 285 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 1108 322 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
+1 1;
+#N canvas 721 331 450 300 chordssoundeffects 0;
+#X obj 56 17 inlet;
+#X obj 78 148 outlet;
+#X obj 55 43 s chordsFX;
+#X obj 78 120 r chordsFX;
+#X connect 0 0 2 0;
+#X connect 3 0 1 0;
+#X restore 1074 246 pd chordssoundeffects;
+#N canvas 721 331 450 300 snaresoundeffects 0;
+#X obj 52 7 inlet;
+#X obj 74 138 outlet;
+#X obj 51 33 s snareFX;
+#X obj 74 110 r snareFX;
+#X connect 0 0 2 0;
+#X connect 3 0 1 0;
+#X restore 1108 300 pd snaresoundeffects;
+#X obj 1161 366 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 1206 405 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 1161 420 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 1240 457 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
+1 1;
+#N canvas 721 331 450 300 basssoundeffects 0;
+#X obj 56 17 inlet;
+#X obj 78 148 outlet;
+#X obj 55 43 s bassFX;
+#X obj 78 120 r bassFX;
+#X connect 0 0 2 0;
+#X connect 3 0 1 0;
+#X restore 1206 381 pd basssoundeffects;
+#N canvas 721 331 450 300 bassdrumsoundeffects 0;
+#X obj 52 7 inlet;
+#X obj 74 138 outlet;
+#X obj 74 110 r bassdrumFX;
+#X obj 51 33 s bassdrumFX;
+#X connect 0 0 3 0;
+#X connect 2 0 1 0;
+#X restore 1240 435 pd bassdrumsoundeffects;
+#X obj 563 469 Sound_Effects;
+#X obj 26 656 r loopbang;
+#X obj 26 685 bng 55 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#N canvas 472 0 948 963 notes_for_myself 0;
+#X text 353 275 problem with AbImaj7 9/8;
+#X text 349 224 n.b. C/bVImaj7/128/6.wav was wrong although the issue
+might have been corrected;
+#X text 699 260 F#vim7 is a bVI;
+#X text 266 375 some of C# audios are playing as 7/8 \, e.g. C# II7
+12/8;
+#X text 112 2 quieter!;
+#X text 112 34 louder!;
+#X text 117 -32 louder!;
+#X text 786 151 quieter!;
+#X text 790 185 louder!;
+#X text 791 117 louder!;
+#X text 772 171 bit louder?;
+#X text 91 19 bit louder?;
+#X restore 1691 629 pd notes_for_myself;
+#X obj 89 640 cnv 15 460 75 empty cnv_BigMessage zero7zero 20 30 0
+50 -262144 -1 0;
+#X obj 723 120 hsl 128 15 0 0.75 0 0 B bang1 Hi-Hat -2 -8 0 15 -262144
+-1 -1 12700 1;
+#X obj 723 64 hsl 128 15 0 0.75 0 0 A bang Crotales\ Glock\ Xylo -2
+-8 0 15 -262144 -1 -1 12700 1;
+#X obj 836 286 hsl 128 15 0 0.75 0 0 D bang3 Snare\ Tom-Toms -2 -8
+0 15 -262144 -1 -1 12700 1;
+#X obj 836 226 hsl 128 15 0 0.75 0 0 C bang2 Synth\ Brass\ FM\ Synth
+-2 -8 0 15 -262144 -1 -1 12700 1;
+#X obj 988 448 hsl 128 15 0 0.75 0 0 F bang5 Bass\ Drum -2 -8 0 15
+-262144 -1 -1 12700 1;
+#X obj 986 396 hsl 128 15 0 0.75 0 0 E bang4 Harp\ Square -2 -8 0 15
+-262144 -1 -1 12700 1;
+#X obj 1007 572 hsl 128 15 0 0.75 0 0 G bang6 Harp\ Square\ Bass\ Drum\ w/\ Paulstretch
+-2 -8 0 15 -262144 -1 -1 12700 1;
+#X obj 533 640 cnv 15 460 75 empty cnv_BigMessageInBb zero7zero 20
+30 0 50 -33289 -262144 0;
+#X obj 168 743 cnv 15 98 89 empty cnv_BigMessageForBassNote zero 20
+30 0 50 -262144 -1 0;
+#X obj 572 743 cnv 15 98 89 empty cnv_BigMessageForBassNoteinBb zero
+20 30 0 50 -33289 -262144 0;
+#X obj 154 594 cnv 15 100 60 empty empty Concert\ Pitch\ (Tuning\ In\ C)
+20 12 0 14 -262144 -1 0;
+#X obj 549 594 cnv 15 270 48 empty empty Concert\ Pitch\ (Tuning\ In\ Bb)
+20 12 0 14 -1 -262144 0;
+#X connect 67 0 66 0;
+#X connect 68 0 69 0;
+#X connect 71 0 70 0;
+#X connect 73 0 74 0;
+#X connect 74 0 75 0;
+#X connect 76 0 78 0;
+#X connect 77 0 76 0;
+#X connect 79 0 83 0;
+#X connect 81 0 84 0;
+#X connect 83 0 80 0;
+#X connect 84 0 82 0;
+#X connect 85 0 89 0;
+#X connect 87 0 90 0;
+#X connect 89 0 86 0;
+#X connect 90 0 88 0;
+#X connect 92 0 93 0;
